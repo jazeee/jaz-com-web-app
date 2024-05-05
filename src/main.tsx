@@ -4,10 +4,10 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { AppRoutes } from "./App/Routes";
+import { App } from "./App/App";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <AppRoutes />
+    <App />
   </React.StrictMode>,
 );
