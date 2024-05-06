@@ -1,8 +1,8 @@
-import { forwardRef } from "react";
+import { forwardRef } from 'react';
 import {
   Link as RouterLink,
   type LinkProps as RouterLinkProps,
-} from "react-router-dom";
+} from 'react-router-dom';
 
 // See https://reactjs.org/docs/forwarding-refs.html
 export const BaseLink = forwardRef<HTMLAnchorElement, RouterLinkProps>(
@@ -11,4 +11,4 @@ export const BaseLink = forwardRef<HTMLAnchorElement, RouterLinkProps>(
   },
 );
 
-BaseLink.displayName = "BaseLink";
+BaseLink.displayName = 'BaseLink';

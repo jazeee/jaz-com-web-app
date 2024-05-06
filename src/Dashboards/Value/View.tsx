@@ -1,6 +1,6 @@
-import { Alert, Container, Typography } from "@mui/material";
-import { useReadingsContext } from "../../Readings/api";
-import { isDefined } from "../../utils/isDefined";
+import { Alert, Container, Typography } from '@mui/material';
+import { useReadingsContext } from '../../Readings/api';
+import { isDefined } from '../../utils/isDefined';
 
 export function ValueView() {
   const { readingsResponse, latestReading } = useReadingsContext();

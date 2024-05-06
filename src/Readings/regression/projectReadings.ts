@@ -1,8 +1,8 @@
-import { SummarizedPlotDatum } from "src/Readings/types";
+import { SummarizedPlotDatum } from '../types';
 
 type TSlopeDatum = Pick<
   SummarizedPlotDatum,
-  "value" | "timeSinceLastReadingInSeconds"
+  'value' | 'timeSinceLastReadingInSeconds'
 >;
 
 function calculateSlopeInValuePerSec(
@@ -80,7 +80,7 @@ export function projectReadings(readingData: SummarizedPlotDatum[]) {
     projectedReadings.push({
       ...latestDatum,
       value,
-      color: "#666",
+      color: '#666',
       opacity: 0.4 * (1 - index / (PROJECTED_COUNT + 4)),
       timeSinceLastReadingInSeconds,
       timeSinceLastReadingInMinutes: timeSinceLastReadingInSeconds / 60,

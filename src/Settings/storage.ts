@@ -1,17 +1,17 @@
-import { SettingProp, SettingName, SettingsStatus } from "./types";
+import { SettingProp, SettingName, SettingsStatus } from './types';
 
 const SETTING_PROPS: SettingProp[] = [
   {
     name: SettingName.USERNAME,
-    defaultValue: "",
+    defaultValue: '',
   },
   {
     name: SettingName.PASSWORD,
-    defaultValue: "",
+    defaultValue: '',
   },
   {
     name: SettingName.SOURCE_URL,
-    defaultValue: "https://jazcom.jazeee.com/sample3",
+    defaultValue: 'https://jazcom.jazeee.com/sample3',
   },
   {
     name: SettingName.SETTINGS_STATE,

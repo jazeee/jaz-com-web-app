@@ -1,10 +1,10 @@
-import { Fragment } from "react";
-import { AxisLine } from "./components/AxisLine";
-import { VertAxisLine } from "./components/VertAxisLine";
-import { format, subMinutes } from "date-fns";
-import { SummarizedPlotDatum, PlotSettings } from "../../Readings/types";
-import { SvgText } from "./components/SvgText";
-import { projectReadings } from "./components/project-readings";
+import { Fragment } from 'react';
+import { AxisLine } from './components/AxisLine';
+import { VertAxisLine } from './components/VertAxisLine';
+import { format, subMinutes } from 'date-fns';
+import { SummarizedPlotDatum, PlotSettings } from '../../Readings/types';
+import { SvgText } from './components/SvgText';
+import { projectReadings } from '../../Readings/regression/projectReadings';
 
 interface Props {
   readings: SummarizedPlotDatum[] | undefined;
@@ -52,7 +52,7 @@ export function ReadingsGraph(props: Props) {
   for (let i = 0; i <= 5 * 60; i += 60) {
     dateAxisValues.push({
       x: calcTimePosition(i * 60),
-      value: format(subMinutes(now, i), "hh:mm a"),
+      value: format(subMinutes(now, i), 'hh:mm a'),
     });
   }
   return (
@@ -99,14 +99,14 @@ export function ReadingsGraph(props: Props) {
         } = datum;
         const x = calcTimePosition(timeSinceLastReadingInSeconds);
         const y = calcValuePosition(value);
-        const textAnchor = (width - x) / width < 0.1 ? "end" : "middle";
+        const textAnchor = (width - x) / width < 0.1 ? 'end' : 'middle';
         return (
           <Fragment key={index}>
             <circle
               cx={x}
               cy={y}
               r="5"
-              stroke={isProjected ? color : "white"}
+              stroke={isProjected ? color : 'white'}
               strokeWidth="1.5"
               fill={color}
               opacity={opacity}

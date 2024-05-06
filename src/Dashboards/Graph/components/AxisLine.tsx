@@ -1,4 +1,4 @@
-import { SvgText } from "./SvgText";
+import { SvgText } from './SvgText';
 
 interface Props {
   y: number;

@@ -1,12 +1,12 @@
-import { useQuery } from "@tanstack/react-query";
-import constate from "constate";
+import { useQuery } from '@tanstack/react-query';
+import constate from 'constate';
 
-import { DEFAULT_SETTINGS, loadSettings } from "./storage";
-import { SettingName, SettingsStatus } from "./types";
+import { DEFAULT_SETTINGS, loadSettings } from './storage';
+import { SettingName, SettingsStatus } from './types';
 
 function useSettings() {
   const settingsQuery = useQuery({
-    queryKey: ["async-settings"],
+    queryKey: ['async-settings'],
     queryFn: loadSettings,
   });
   const {

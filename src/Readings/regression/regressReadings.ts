@@ -1,6 +1,6 @@
 // @ts-expect-error Ignore untyped package
-import regression from "regression";
-import { SummarizedPlotDatum } from "src/Readings/types";
+import regression from 'regression';
+import { SummarizedPlotDatum } from '../types';
 
 interface IProjectedPlotDatum extends SummarizedPlotDatum {
   isProjected: boolean;
@@ -77,7 +77,7 @@ export function projectReadings(
     projectedReadings.push({
       ...latestDatum,
       value,
-      color: "#666",
+      color: '#666',
       opacity: 0.6 * (1 - index / (PROJECTED_COUNT - 2)),
       timeSinceLastReadingInSeconds,
       timeSinceLastReadingInMinutes: timeSinceLastReadingInSeconds / 60,

@@ -1,4 +1,4 @@
-import { ReactNode, SVGTextElementAttributes } from "react";
+import { ReactNode, SVGTextElementAttributes } from 'react';
 
 interface Props extends SVGTextElementAttributes<SVGTextElement> {
   x: number;

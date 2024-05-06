@@ -1,12 +1,12 @@
-import { useQuery } from "@tanstack/react-query";
-import { SummarizedPlotDatum } from "./types";
-import constate from "constate";
+import { useQuery } from '@tanstack/react-query';
+import { SummarizedPlotDatum } from './types';
+import constate from 'constate';
 
 function useReadings() {
   const readingsResponse = useQuery({
-    queryKey: ["readings"],
+    queryKey: ['readings'],
     queryFn: async () => {
-      const response = await fetch("http://localhost:4242/readings");
+      const response = await fetch('http://localhost:4242/readings');
       const readings: { readings: SummarizedPlotDatum[] } =
         await response.json();
       return readings;

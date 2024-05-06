@@ -1,7 +1,7 @@
-import { Alert, Container } from "@mui/material";
-import { useReadingsContext } from "../../Readings/api";
-import { ReadingsGraph } from "./Graph";
-import { DEFAULT_META } from "../../Readings/constants";
+import { Alert, Container } from '@mui/material';
+import { useReadingsContext } from '../../Readings/api';
+import { ReadingsGraph } from './Graph';
+import { DEFAULT_META } from '../../Readings/constants';
 
 export function GraphView() {
   const { readingsResponse } = useReadingsContext();

@@ -1,7 +1,7 @@
-import { Link, AppBar, Toolbar, Container, Stack } from "@mui/material";
-import { Outlet } from "react-router-dom";
-import { BaseLink } from "../lib/Links/BaseLink";
-import { useReadingFaviconEffect } from "../Readings/useFaviconEffect";
+import { Link, AppBar, Toolbar, Container, Stack } from '@mui/material';
+import { Outlet } from 'react-router-dom';
+import { BaseLink } from '../lib/Links/BaseLink';
+import { useReadingFaviconEffect } from '../Readings/useFaviconEffect';
 
 export function AppLayout() {
   useReadingFaviconEffect();

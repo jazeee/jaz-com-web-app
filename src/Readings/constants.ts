@@ -1,7 +1,7 @@
-import { PlotSettings } from "./types";
+import { PlotSettings } from './types';
 
 export const DEFAULT_META: PlotSettings = {
-  units: "mg/dL",
+  units: 'mg/dL',
   lowWarning: 55,
   highWarning: 180,
   minScale: 30,

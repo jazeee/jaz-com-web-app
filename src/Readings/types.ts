@@ -4,13 +4,13 @@ export interface PlotDimensions {
 }
 
 export enum Trend {
-  DoubleDown = "DoubleDown",
-  SingleDown = "SingleDown",
-  FortyFiveDown = "FortyFiveDown",
-  Flat = "Flat",
-  FortyFiveUp = "FortyFiveUp",
-  SingleUp = "SingleUp",
-  DoubleUp = "DoubleUp",
+  DoubleDown = 'DoubleDown',
+  SingleDown = 'SingleDown',
+  FortyFiveDown = 'FortyFiveDown',
+  Flat = 'Flat',
+  FortyFiveUp = 'FortyFiveUp',
+  SingleUp = 'SingleUp',
+  DoubleUp = 'DoubleUp',
 }
 
 export interface PlotDatumDateProps {

@@ -1,9 +1,9 @@
-import { CssBaseline, ThemeProvider } from "@mui/material";
-import { APP_THEME } from "../Mui/theme";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { SettingsProvider } from "../Settings/context";
-import { ReactNode } from "react";
-import { ReadingsProvider } from "../Readings/api";
+import { CssBaseline, ThemeProvider } from '@mui/material';
+import { APP_THEME } from '../Mui/theme';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { SettingsProvider } from '../Settings/context';
+import { ReactNode } from 'react';
+import { ReadingsProvider } from '../Readings/api';
 
 const queryClient = new QueryClient();
 

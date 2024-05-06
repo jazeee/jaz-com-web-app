@@ -1,7 +1,7 @@
-import { Route, Routes } from "react-router-dom";
-import { AppLayout } from "./Layout";
-import { SettingsForm } from "../Settings/Form";
-import { DashboardRoutes } from "../Dashboards/Routes";
+import { Route, Routes } from 'react-router-dom';
+import { AppLayout } from './Layout';
+import { SettingsForm } from '../Settings/Form';
+import { DashboardRoutes } from '../Dashboards/Routes';
 
 export function AppRoutes() {
   return (
