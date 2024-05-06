@@ -1,4 +1,4 @@
-import { Link, AppBar, Toolbar, Typography, Container } from "@mui/material";
+import { Link, AppBar, Toolbar, Container, Stack } from "@mui/material";
 import { Outlet } from "react-router-dom";
 import { BaseLink } from "../lib/Links/BaseLink";
 import { useReadingFaviconEffect } from "../Readings/useFaviconEffect";
@@ -10,11 +10,14 @@ export function AppLayout() {
       <AppBar position="static">
         <Toolbar variant="dense">
           <Container maxWidth="md">
-            <Typography>
+            <Stack direction="row" spacing={2}>
               <Link component={BaseLink} to="/dashboard/values">
                 Values
               </Link>
-            </Typography>
+              <Link component={BaseLink} to="/dashboard/graph">
+                Graph
+              </Link>
+            </Stack>
           </Container>
         </Toolbar>
       </AppBar>
