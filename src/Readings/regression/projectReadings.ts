@@ -1,13 +1,13 @@
 import { SummarizedPlotDatum } from '../types';
 
-type TSlopeDatum = Pick<
+export type ReadingValueAndTime = Pick<
   SummarizedPlotDatum,
   'value' | 'timeSinceLastReadingInSeconds'
 >;
 
 function calculateSlopeInValuePerSec(
-  datum1: TSlopeDatum,
-  datum2: TSlopeDatum,
+  datum1: ReadingValueAndTime,
+  datum2: ReadingValueAndTime,
   maxDeltaInSeconds = 10 * 60,
 ) {
   const { value: value1, timeSinceLastReadingInSeconds: timeInSec1 = 0 } =
@@ -25,7 +25,7 @@ function calculateSlopeInValuePerSec(
 }
 
 function extractSlopeStatistics(
-  readingData: TSlopeDatum[],
+  readingData: ReadingValueAndTime[],
   latestResultWeight = 0.5,
 ) {
   const slopes = [];
@@ -53,7 +53,7 @@ function extractSlopeStatistics(
 }
 
 const PROJECTED_COUNT = 10;
-export function projectReadings(readingData: SummarizedPlotDatum[]) {
+export function projectReadings(readingData: ReadingValueAndTime[]) {
   if (readingData.length <= 3) {
     return [];
   }
