@@ -5,21 +5,28 @@ import { format, subMinutes } from 'date-fns';
 import { SummarizedPlotDatum, PlotSettings } from '../../Readings/types';
 import { SvgText } from './components/SvgText';
 import { projectReadings } from '../../Readings/regression/projectReadings';
+import { Dimensions } from './types';
+import { isDefined } from 'src/utils/isDefined';
 
 interface Props {
   readings: SummarizedPlotDatum[] | undefined;
-  width: number;
-  height: number;
+  dimensions: Dimensions;
   plotSettings: PlotSettings;
 }
 
 const FUTURE_TIME_IN_SECONDS = 40 * 60;
 
 export function ReadingsGraph(props: Props) {
-  const { width, height, readings, plotSettings } = props;
-  if (!width || !height || !readings || !readings.length || !plotSettings) {
+  const { dimensions, readings, plotSettings } = props;
+  if (
+    !isDefined(dimensions) ||
+    !isDefined(readings) ||
+    readings.length === 0 ||
+    !isDefined(plotSettings)
+  ) {
     return null;
   }
+  const { width, height } = dimensions;
   const {
     minScale, //: 30,
     lowAxis, //: 70,
