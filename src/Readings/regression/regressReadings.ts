@@ -1,5 +1,5 @@
 // @ts-expect-error Ignore untyped package
-import regression from 'regression';
+import regression from '@jazeee/regression';
 import { SummarizedPlotDatum } from '../types';
 
 interface IProjectedPlotDatum extends SummarizedPlotDatum {
