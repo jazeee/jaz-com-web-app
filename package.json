@@ -24,7 +24,7 @@
     "react-dom": "18.3.1",
     "react-error-boundary": "4.0.13",
     "react-router-dom": "6.23.0",
-    "regression": "jazeee/regression-js#07be8530cab0269772d744d1d43180efc3b727d9",
+    "@jazeee/regression": "2.0.3",
     "zod": "3.23.5"
   },
   "devDependencies": {
