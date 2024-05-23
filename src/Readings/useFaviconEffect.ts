@@ -16,7 +16,7 @@ function getColors(value: number | undefined) {
       textColor: '#FFF',
     };
   }
-  if (value > 140) {
+  if (value > 160) {
     return {
       backgroundColor: '#fc2',
       textColor: '#000',
